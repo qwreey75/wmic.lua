@@ -3,7 +3,7 @@ local spawn = require"coro-spawn";
 
 local module = {};
 local proc = spawn("wmic",{args = {},stdio = {true,true,true}});
-local stdinWrite = proc.stdin.read;
+local stdinWrite = proc.stdin.write;
 local insert = table.insert;
 local wrap = coroutine.wrap;
 local yield =  coroutine.yield;
