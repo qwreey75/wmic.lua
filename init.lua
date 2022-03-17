@@ -60,7 +60,7 @@ end
 local addEventListener = module.addEventListener;
 
 local getCpuLoadpercentage = "LoadPercentage\n-(%d+)";
-local getCPuLoadpercentageCommand = "cpu get loadpercentage";
+local getCPuLoadpercentageCommand = "cpu get loadpercentage\n";
 events[getCpuLoadpercentage] = {};
 function module.getCpuLoadpercentage()
 	return addEventListener(getCpuLoadpercentage,getCPuLoadpercentageCommand);
